@@ -1,0 +1,276 @@
+* {
+    margin: 0;
+    outline: 0;
+    border: 0;
+    padding: 0;
+
+    color: #010518;
+    text-decoration: none;
+}
+
+body {
+    background: aliceblue;
+}
+
+a, input, select, .productCard, input[type = checkbox], #alert, #deleter, .white-btn {
+    transition: all 0.2s ease-in;
+}
+/* Хэдер */
+nav {
+    background: #010518;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+nav > * {
+    display: flex;
+    justify-content: center;
+    width: 1fr;
+}
+nav a {
+    display: block;
+    margin: 0 20px;
+    border: 3px solid #010518;
+    padding: 20px 0px;
+
+    color: aliceblue;
+}
+nav a:hover {
+    margin: 0;
+    border-top-color:  aliceblue;
+    padding: 20px;
+}
+
+/* Контент */
+main {
+    width: 80%;
+    min-width: 400px;
+    min-height: 400px;
+    margin: 15px auto;
+    border-radius: 15px;
+    padding: 20px;
+
+    background-color: #01051816;
+    box-shadow: inset 0 0 10px 10px #01051820;
+}
+main * {
+    color: #010518;
+}
+
+/* Слайдер */
+#slider {
+    width: 400px;
+    margin: auto;
+    border: 1px solid #010518;
+}
+#slider-line {
+    display: flex;
+}
+#slider-line img {
+    width: 400px;
+    height: 300px;
+}
+
+/* Формы */
+form {
+    width: 450px;
+    max-width: 70vw;
+
+    margin: 15px auto;
+    border-radius: 15px;
+    padding: 20px;
+
+    background-color: #01051816;
+    box-shadow: inset 0 0 10px 10px #01051820;
+
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+}
+/* У инпута и карточки товара единый стиль */
+input, select, .productCard, .white-btn {
+    margin: 10px auto;
+    border-radius: 15px;
+    padding: 10px 15px;
+
+    box-shadow: 0 0 5px 5px #01051820;
+
+    background-color: #f5f5f5;
+}
+input:hover, select:hover, .productCard:hover, .white-btn:hover{
+    box-shadow: 0 0 5px 5px #01051843;
+}
+input[type = submit] {
+    cursor: pointer;
+}
+
+.filter {
+    width: 100%;
+    height: auto;
+
+    margin: auto;
+    padding: 0;
+
+    background-color: #01051800;
+    box-shadow: inset 0 0 10px 10px #01051800;
+
+    flex-direction: row;
+    align-items: center;
+}
+
+/* Сообщения от сервера */
+#alert {
+    min-width: 200px;
+    border-radius: 15px;
+    padding: 10px;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+
+    background-color: #b3dcff;
+    box-shadow: 0 0 3px 3px #01051843;
+}
+#alert span {
+    margin: auto;
+}
+#deleter {
+    width: 20px;
+    height: 20px;
+
+    font-size: 1.2rem;
+    background-color: #00000000;
+    cursor: pointer;
+}
+#deleter:hover {
+    border-radius: 15px;
+    background-color: #166cdd24;
+}
+.go-out {
+    opacity: 0;
+}
+
+/* Админ-панель */
+#admNav {
+    background: aliceblue;
+
+    display: flex;
+    justify-content: center;
+}
+
+#admNav > * {
+    display: flex;
+    justify-content: center;
+    width: 1fr;
+}
+#admNav a {
+    border: 3px solid aliceblue;
+    
+    color: #010518;
+}
+#admNav a:hover {
+    border-top-color:  #010518;
+}
+
+#admTool {
+    flex-direction: row-reverse;
+    justify-content: space-around;
+}
+
+/* Списки в админ-панели */
+#list {
+    padding: 0 10% 0 0;
+    overflow-y: scroll;
+}
+#list > div {
+    margin: 5px auto;
+    border-radius: 15px;
+    padding: 10px 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #010518;
+}
+#list > div * {
+    display: block;
+    color: #fff;
+}
+#list > div span {
+    width: 300px;
+}
+#list a {
+    width: 30px;
+    height: 30px;
+    font-size: 1.2rem;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+}
+#list a:hover {
+    border-radius: 15px;
+    background-color: aliceblue;
+    color: #000;
+}
+/* Контент */
+main {
+    width: 80%;
+    min-width: 400px;
+    min-height: 400px;
+    margin: 15px auto;
+    border-radius: 15px;
+    padding: 20px;
+
+    background-color: #01051816;
+    box-shadow: inset 0 0 10px 10px #01051820;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Каталог */
+#productList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    }
+.imgWrapper {
+    overflow: hidden;
+    height: 200px;
+    max-width: 400px;
+}
+.imgWrapper > img {
+    max-width: 200px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.descProduct {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.descProduct a {
+    border: 1px solid #010518;
+    border-radius: 15px;
+    padding: 5px 10px;
+    
+    background-color: #f5f5f5;
+    color: #010518;
+}
+.descProduct a:hover {
+    color: #f5f5f5;
+    background-color: #010518;
+}
