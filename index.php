@@ -7,6 +7,7 @@ $res = $con->query("SELECT * FROM `products` ORDER BY `cost` ASC LIMIT 5");
 $sliderData = $res->fetch_all(MYSQLI_ASSOC);
 ?>
 <main>
+    <button id="prevSlide">←</button>
     <div id="slider">
         <div id="slider-line">
             <?php
@@ -18,4 +19,6 @@ $sliderData = $res->fetch_all(MYSQLI_ASSOC);
             ?>
         </div>
     </div>
+    <button id="nextSlide">→</button>
+    <script src="./scripts/slider.js"></script>
 </main>
